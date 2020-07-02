@@ -1,0 +1,37 @@
+
+.navbar {
+    overflow: hidden;
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.navbar-right {
+    margin-right: 10%;
+    float: right;
+    display: block;
+    text-align: center;
+}
+
+.navbar a {
+    color: seashell;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-left {
+    float: left;
+    color: seashell;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 50px;
+    margin-left: 10%;
+}
+
+.main {
+    margin-top: 30px;
+}
