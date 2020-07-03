@@ -1,37 +1,52 @@
-
-.navbar {
-    overflow: hidden;
-    background-color: red;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
+* {
+  box-sizing: border-box;
+  /*border: 1px solid red !important;*/
+  margin: 0 0;
 }
 
-.navbar-right {
-    margin-right: 10%;
-    float: right;
-    display: block;
-    text-align: center;
+body {
+  /*font-family: Arial, Helvetica, sans-serif*/
 }
 
-.navbar a {
-    color: seashell;
-    padding: 14px 16px;
-    text-decoration: none;
+header {
+  height: 100vh;
+  background-color: #FF6067;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.navbar-left {
-    float: left;
-    color: seashell;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 50px;
-    margin-left: 10%;
+.hero-logo {
+  /*display: flex;
+  justify-content: center;*/
+  font-family: 'Playfair Display';
+  color: white;
+  font-size: 1250%;
+  margin-bottom: -40px;
+  margin-top: -6%;
 }
 
-.main {
-    margin-top: 30px;
+.hero-text {
+  color: white;
+  font-size: 125%;
+  font-family: 'helvetica';
+  font-weight: 200;
+}
+
+.nav {
+ position: fixed;
+ bottom: 4%;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em;
+  font-family: 'helvetica';
+  font-weight: 200;
+}
+
+.nav a:hover {
+  text-decoration: underline;
 }
