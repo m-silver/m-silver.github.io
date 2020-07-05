@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>one tech.</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../styles/main.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div class="header-sub tech">
+        <div class="dummy-space"></div>
+        <div class="sub-title">sprint two.</div>
+        <div class="sub-nav">
+            <a href=../index.html>home</a>
+            <a href=../about.html>about</a>
+            <a href=../tech.html>tech</a>
+            <a href=../core.html>core</a>
+        </div>
+    </div>
+    <div class="content">
+      <h1>the flexbox</h1>
+      <h2>my journey understading a perplexing flex</h2>
+      <h3>five july | twenty twenty</h3>
+      <br>
+      <p>For my sprint two technical blog, I decided to write about something that I really struggled to wrap my head around, the flexbox.</p>
+      <br>
+      <p>Flexbox is a powerful tool within css to organise and distribute content horizontally or vertically. There are a lot of dimensions to flexbox, so I will stick to the fundamentals and core elements. Let’s start from the flex-start… er top. </p>
+      <br>
+      <p style="font-style: italic;">PS - while I write this, my wife is reorganising the pantry, I am going to use this as an analogy throughout the blog!</p>
+      <br>
+      <br>
+      <p>There are two main elements to flexbox; the parent (container), and the children (items).</p>
+
+      <div class="img-row">
+        <div class="img-column">
+          <img src="../images/sprint2-technical/flex-container.svg" alt="flex container" style="width:100%">
+        </div>
+        <div class="img-column">
+            <img src="../images/sprint2-technical/flex-items.svg" alt="flex items" style="width:100%">
+          </div>
+      </div>
+
+      <br>
+      <p>To make a flexbox container, we give it the property ‘display: flex;’. For our pantry example, let’s make the whole pantry a flex container.</p>
+      <br>
+
+        <div class="img-container">
+      <img src="../images/sprint2-technical/screenshot1.png" alt="display flex example" style="width: 50%">
+        </div>
+
+      <br>
+      <p>Now any items (children) we put into the pantry automatically jump to the left, and fill the space according to their own size, rather than just randomly existing in the pantry. That’s pretty cool, I can just lob cans of baked beans into the pantry and watch them organise themselves.</p>
+      <br>
+      <p>The pantry is a tall skinny structure, so there isn’t too much width or ‘right to left’ to play with for organisation. What we need, is some vertical flex! By giving the pantry (container) the property ‘flex-direction: column;’, the pantry will now organise items from top to bottom automatically, rather than left to right. Let’s throw in a few shelves and some draws, and the pantry (container) will distribute these according to their size from top to bottom. </p>
+      <br>
+
+      <div class="img-row">
+        <div class="img-column">
+          <img src="../images/sprint2-technical/screenshot2.png" alt="flex direction example" style="width:100%">
+        </div>
+        <div class="img-column">
+            <img src="../images/sprint2-technical/screenshot2b.png" alt="adding shelves and drawers" style="width:100%">
+          </div>
+      </div>
+
+      <br>
+      <!--italicise below-->
+      <p style="font-style: italic;">Note: as well as the default (row) and the above (column) flex-direction can  be set to row-reverse (right to left), or column-reverse (bottom to top).</p>
+      <br>
+      <p>Now that our pantry has shelves and drawers filing the vertical space, let’s make one of these shelves a flex container to demonstrate a few more of the principles. We will give this shelf the property “display: flex;”, and leave the direction as default (row, left to right).</p>
+      <br>
+
+      <div class="img-container">
+        <img src="../images/sprint2-technical/screenshot3.png" alt="shelf display flex" style="width: 50%">
+          </div>
+
+      <br>
+      <p>We mentioned that the flex container automatically places  children or items in a row (or column) from the start to the end. Well with the ‘justify-content’ property, we can tell the flex container where to distribute those items. The image here shows the different ways we could have our items organised on our shelf (container). In this case, we are going to use justify-content: space-between;, which will have items on the far left and right of the shelf, and everything else spaced equidistant between. </p>
+      <br>
+
+      <div class="img-container">
+        <img src="../images/sprint2-technical/screenshot4.png" alt="shelf justify-content space-between" style="width: 50%">
+          </div>
+
+      <br>
+      <!--italicise-->
+      <p style="font-style: italic;">Note: items can also be organised along the cross axis (vertically for flex-direction: row; and horizontally for flex-direction: column;) with the align-items and align-content properties.</p>
+      <br>
+      <p>So far all the properties we have been discussing have been regarding the container, or the pantry itself (and the shelves, we made those flex containers too, its container inception!). There are also properties we can give the items in our pantry (children) that will effect how they behave within the pantry or within the shelf. Let's put some things on the shelf.</p>
+      <br>
+ 
+      <div class="img-container">
+        <img src="../images/sprint2-technical/screenshot5.png" alt="things on the shelf" style="width: 50%">
+          </div>
+
+      <br>
+      <p>By default, the shelf is going to order items in the same order you put them in there (the order you write them in html). By using the “order” property, you can change this. If you want your coffee container to always be the very left hand item on your shelf, regardless of whether it gets put in after the hot chocolate, give the coffee a property of 'order: 1;'</p>
+      <br>
+
+      <div class="img-container">
+        <img src="../images/sprint2-technical/screenshot6.png" alt="coffee property order" style="width: 50%">
+          </div>
+
+      <br>
+      <p>Lastly, one of the coolest tricks with flexbox, is the flex-grow and flex-shrink property. Bear with me, this one is hard to analogise with the pantry… With flex-grow: 1;, the items on the shelf will grow to fill the entire shelf. If you only have coffee on the shelf, you will magically have a coffee container the width of the shelf (glorious!). If you have coffee and hot chocolate on the shelf, they will now magically take up half the shelf each (that’s a lot of mochas). If you don’t want them to fill up the space evenly, you can give them a different value in the proportion you are after. We really like coffee, and only occasionally want a hot chocolate, so we give the coffee a flex-grow: 2 and hot chocolate a flex-grow: 1;. Now the coffee will grow to fill the space at twice the rate of the hot chocolate (perfect). Flex-shrink has a similar effect but in reverse.</p>
+      <br>
+      <p>To summarise, flexbox is a useful tool for creating flexible and responsive website layouts, solving some of the frustrations web designers have been dealing with for many years. It can be used to arrange content within vertical or horizontal containers and have that content fill or be distributed within those containers in a variety of different ways. </p>
+    </div>
+</body>
